@@ -1,11 +1,10 @@
 # FIXES
+This is VERY WIP!
 
-Currently sample does not build, but chatkit will.
-
-This fixes the issue with it crashing on newer versions of android, specifically the error: `android.view.InflateException: Binary XML file line`
-
-
-This is a **VERY WIP** Fixed repo, I don't know much Android development.
+Fixes:
+  - error: `android.view.InflateException: Binary XML file line`
+  - HTTPS for images in sample
+  - Compiled for a newer version of android
 
 -------------
 
