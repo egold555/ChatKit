@@ -1,25 +1,27 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 29
-    buildToolsVersion '29.0.2'
+    namespace "com.stfalcon.chatkit.sample"
+
+    compileSdkVersion 34  // Updated to the latest available version
+
     defaultConfig {
         applicationId "com.stfalcon.chatkit.sample"
-        minSdkVersion 14
+        minSdkVersion 21
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
+
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-    android {
-        lintOptions {
-            abortOnError false
-        }
+
+    lintOptions {
+        abortOnError false
     }
 
     compileOptions {
@@ -28,16 +30,17 @@ android {
     }
 }
 
+
 dependencies {
     implementation project(':chatkit')
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    testImplementation 'junit:junit:4.13'
+//    androidTestImplementation('androidx.test.espresso:espresso-core:3.1.0', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+//    testImplementation 'junit:junit:4.13'
 
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.2.1'
 
