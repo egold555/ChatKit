@@ -1,3 +1,15 @@
+# FIXES
+
+Currently sample does not build, but chatkit will.
+
+This fixes the issue with it crashing on newer versions of android, specifically the error: `android.view.InflateException: Binary XML file line`
+
+
+This is a **VERY WIP** Fixed repo, I don't know much Android development.
+
+-------------
+
+
 # ChatKit for Android
 
 [![](https://jitpack.io/v/stfalcon-studio/Chatkit.svg)](https://jitpack.io/#stfalcon-studio/Chatkit)
